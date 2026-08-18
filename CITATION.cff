@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying article."
+title: "Group-Contaminated Structured Outcomes Reproducibility Repository"
+type: software
+authors:
+  - family-names: Faghihi
+    given-names: Usef
+  - family-names: Saki
+    given-names: Amir
+repository-code: "https://github.com/joseffaghihi/Group-Contaminated-Structured-Outcomes"
+date-released: 2026-08-18
+preferred-citation:
+  type: article
+  title: "Causal Inference for Group-Contaminated Structured Outcomes: Quotient Identification and Exact Randomization Inference"
+  authors:
+    - family-names: Faghihi
+      given-names: Usef
+    - family-names: Saki
+      given-names: Amir
+  year: 2026
