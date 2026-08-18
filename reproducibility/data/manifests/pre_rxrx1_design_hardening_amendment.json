@@ -1,0 +1,80 @@
+{
+  "amended_at": "2026-07-31T04:34:41-04:00",
+  "amendment_scope": [
+    "discovery-only pair-selection replay",
+    "confirmatory input and source-integrity enforcement",
+    "result-to-source hash linkage",
+    "scientific terminology and endpoint-definition corrections"
+  ],
+  "reason": "An independent pre-analysis audit found that the prior selector used confirmation completeness and same-plate metadata, that the confirmatory runner did not enforce every frozen input and parameter, and that several manuscript labels overstated blinding, replication, and diagnostic paired-swap validity.",
+  "selection_replay": {
+    "prior_manifest_path": "data/manifests/invalidated/selection_manifest_validation_completeness_filter.json",
+    "prior_manifest_sha256": "c7824d090db75b049f64269cb060cb38d56818ecd4c11b196b3347c2c4ac7207",
+    "replacement_manifest_path": "data/manifests/selection_manifest.json",
+    "replacement_manifest_sha256": "b6f350ca96fb9e7a6271845dd6e432ed9dca556144a1a332d8f5af168642b968",
+    "confirmation_fields_used_by_replacement_selector": [],
+    "ordered_pairs_and_discovery_scores_equal_to_prior_manifest": true,
+    "eligible_sirna_count_prior": 1096,
+    "eligible_sirna_count_discovery_only": 1106,
+    "selected_pairs": [
+      [384, 747],
+      [205, 846],
+      [398, 745],
+      [120, 749],
+      [204, 441],
+      [229, 1007],
+      [624, 877],
+      [32, 943],
+      [44, 569],
+      [330, 722]
+    ]
+  },
+  "analysis_hardening": {
+    "runner_requires_selection_sidecar_and_exact_manifest_sha256": true,
+    "runner_requires_completed_image_integrity_manifest_and_sidecar": true,
+    "runner_rehashes_all_1920_confirmation_pngs_before_analysis": true,
+    "runner_rejects_nonfrozen_analysis_parameters": true,
+    "runner_requires_exact_analysis_source_sha256_values": true,
+    "downloader_and_runner_require_metadata_sha256_frozen_in_selection_manifest": true,
+    "rxrx1_audit_records_result_and_source_sha256_values": true,
+    "results_builder_rechecks_recorded_output_and_source_sha256_values": true,
+    "results_builder_requires_the_passed_independent_simulation_reproduction_audit": true
+  },
+  "scientific_corrections": [
+    "The paper now states well-defined reagent versions, no cross-well interference, swap-invariant block retention, and conditional assignment uniformity.",
+    "The adaptive Euler sweep and four-pixel 8-connected component filter are defined to match the implementation.",
+    "The nine nonprimary pairs are called a secondary-contrast family rather than biological replications.",
+    "Raw-coordinate and moment-registration paired-swap values are labeled diagnostics rather than exact causal tests.",
+    "Generated nuisance elements are described as excluded from estimator inputs, not as independently blinded.",
+    "SHA-256 sidecars are described as integrity records rather than externally timestamped cryptographic seals.",
+    "The exact-test theorem now conditions assignment uniformity on the complete potential-outcome schedule and pretreatment design information.",
+    "The exact-test implementation, including statistics.py, is mechanically hash-gated before analysis.",
+    "The image downloader and confirmatory runner now reject metadata that differ from the source SHA-256 frozen in the discovery selection manifest."
+  ],
+  "simulation_note": {
+    "numerical_results_changed": false,
+    "simulation_csvs_changed": false,
+    "independent_full_default_reproduction_passed": true,
+    "independent_reproduction_audit_sha256": "80ce0484034c42b3ba975e1a037d81e96ea0dd5b29d7778e9df321b6c065e916",
+    "figure_labels_corrected_after_the_completed_run": true,
+    "current_simulation_code_sha256": "ad3f4a697dc41f7307ff41943f2c3eb84afcd7dfd37f2b0d01d62edce966cbac",
+    "simulation_runner_sha256": "51a246db34a34aabdb52e80a1cd5238235f8f066f890389d03745e072a7b9284"
+  },
+  "source_sha256": {
+    "src/cqoi/selection.py": "8470713a94355b27bc0272d77435def4e4f7967c0e09c54d1049282d69910657",
+    "scripts/select_rxrx1_pair.py": "694051ad9cda9abab9651d425350ee672721ebe5c94f525b151e5161fe19d67c",
+    "src/cqoi/experiment.py": "da741a882bc8ee176d5655c1c1ebf50467a465d7fb7a9e448dd83131d53c557e",
+    "src/cqoi/invariants.py": "fdf2fb64cc577cbec4e3fce412dc7ff54f84f198ac48ebd492fdd2b35832c3ea",
+    "src/cqoi/statistics.py": "3b597db2171c002915a54b501f9337383e5591388cf5715d76cd407fc1a2b965",
+    "scripts/run_rxrx1_experiment.py": "952f625d34bf27dadf09ecb29704743c670dbda66b565c63e2325018b6e79fd4",
+    "scripts/build_results_tex.py": "35d5eacdf9c602e8d6cd79a3dbfec1d877b0f55a744bb0560d3d479df87aa6aa",
+    "scripts/fetch_rxrx1_subset.py": "606bb4d4da86c8451b119265008a920038922f81712b7284ed2b425c79cadb2b"
+  },
+  "outcome_access_statement": "No RxRx1 image feature, test statistic, p-value, interval, secondary-contrast result, negative-control result, or robustness result had been computed or inspected. Image files retrieved before this amendment were handled only by archive-member extraction and integrity checks. The replacement discovery-only selector produced exactly the same ordered pairs and scores before any RxRx1 image analysis.",
+  "post_amendment_tests": {
+    "count": 29,
+    "failures": 0,
+    "progress_sha256": "0a07fc1c5383f572cbaf277fc54fdac5354122d08ba38e8d483cd6c2162b77ee"
+  },
+  "status": "frozen_before_heldout_rxrx1_image_analysis"
+}

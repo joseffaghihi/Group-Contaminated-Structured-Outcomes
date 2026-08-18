@@ -1,0 +1,30 @@
+{
+  "analysis_status": "post_outcome_exploratory_extension",
+  "critical_gamma": {
+    "critical_gamma": 2.1999953016638756,
+    "crossed": true,
+    "lower_bracket_gamma": 2.199995294213295,
+    "upper_bracket_gamma": 2.1999953016638756,
+    "upper_p_at_critical_gamma": 0.050000000308092846
+  },
+  "exact_randomization_p_value": 0.0078125,
+  "feature_bandwidth": 5.7314766778008135,
+  "matches_frozen_condition_order_result": true,
+  "model": "conditional independence of the eight paired assignment bits, with each assignment probability pi_b in [1/(1+Gamma), Gamma/(1+Gamma)]",
+  "observed_assignment_bits": [
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+  ],
+  "observed_statistic": 0.003643781768319254,
+  "pairs": 8,
+  "permutations": 256,
+  "primary_pair": "pair_01",
+  "tail_event_assignments": 2,
+  "within_pair_order": "ascending_well_id_label_blind"
+}

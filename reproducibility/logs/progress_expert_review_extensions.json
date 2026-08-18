@@ -1,0 +1,13 @@
+{
+  "completed": 252,
+  "elapsed_seconds": 3.3983421325683594,
+  "eta_seconds": 0.0,
+  "failures": 0,
+  "fraction": 1.0,
+  "message": "post-analysis expert-review extensions completed",
+  "stage": "expert-review-extensions",
+  "started_at": 1785505366.0808089,
+  "status": "completed",
+  "total": 252,
+  "updated_at": 1785505369.479151
+}

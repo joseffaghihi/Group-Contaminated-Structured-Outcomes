@@ -1,0 +1,31 @@
+{
+  "command": [
+    "python",
+    "scripts/run_expert_review_extensions.py",
+    "--selection",
+    "data/manifests/selection_manifest.json",
+    "--amendment",
+    "data/manifests/post_rxrx1_expert_review_extension.json",
+    "--metadata",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_support/rxrx1/metadata.csv",
+    "--data-root",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_validation_subset",
+    "--nuisance-truth",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_rerun/hidden_nuisance_truth_NOT_ANALYSIS.csv",
+    "--integrity-manifest",
+    "data/manifests/rxrx1_subset_integrity.json",
+    "--original-results",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_rerun/pair_seed_results.csv",
+    "--output",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extensions_rerun",
+    "--progress",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/progress_extensions_rerun.json"
+  ],
+  "command_shell_escaped": "python scripts/run_expert_review_extensions.py --selection data/manifests/selection_manifest.json --amendment data/manifests/post_rxrx1_expert_review_extension.json --metadata /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_support/rxrx1/metadata.csv --data-root /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_validation_subset --nuisance-truth /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_rerun/hidden_nuisance_truth_NOT_ANALYSIS.csv --integrity-manifest data/manifests/rxrx1_subset_integrity.json --original-results /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_rerun/pair_seed_results.csv --output /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extensions_rerun --progress /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/progress_extensions_rerun.json",
+  "cwd": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/workcopy",
+  "elapsed_seconds": 2.6485043779994157,
+  "ended_utc": "2026-08-18T16:28:08.417756+00:00",
+  "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+  "returncode": 0,
+  "started_utc": "2026-08-18T16:28:05.769407+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python",
+    "scripts/select_rxrx1_pair.py",
+    "--metadata",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_support/rxrx1/metadata.csv",
+    "--embeddings",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_support/rxrx1/embeddings.csv",
+    "--manifest",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/selection_manifest_rerun.json",
+    "--progress",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/progress_selection_rerun.json"
+  ],
+  "command_shell_escaped": "python scripts/select_rxrx1_pair.py --metadata /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_support/rxrx1/metadata.csv --embeddings /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_support/rxrx1/embeddings.csv --manifest /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/selection_manifest_rerun.json --progress /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/progress_selection_rerun.json",
+  "cwd": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/workcopy",
+  "elapsed_seconds": 3.761883957000464,
+  "ended_utc": "2026-08-18T16:09:03.961168+00:00",
+  "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+  "returncode": 0,
+  "started_utc": "2026-08-18T16:09:00.199430+00:00"
+}

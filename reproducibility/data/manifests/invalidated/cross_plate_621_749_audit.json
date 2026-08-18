@@ -1,0 +1,43 @@
+{
+  "audit_date": "2026-07-31",
+  "invalidated_before_validation_outcome_test": true,
+  "invalidated_manifest_original_sha256": "86a839081bf53bb85f03c66a3d0910ad9a525f3099ab77b04fd6b549b1780764",
+  "invalidated_selected_sirna_ids": [
+    621,
+    749
+  ],
+  "invalidated_selected_sirnas": [
+    "s20818",
+    "s18763"
+  ],
+  "reason": "The two selected non-control siRNAs belong to different fixed plate groups, so within-experiment treatment-label swaps would cross a nonrandomized plate restriction.",
+  "same_plate_in_any_huvec_experiment_01_to_24": false,
+  "plate_assignments": {
+    "HUVEC-01": [4, 3],
+    "HUVEC-02": [4, 3],
+    "HUVEC-03": [4, 3],
+    "HUVEC-04": [4, 3],
+    "HUVEC-05": [4, 3],
+    "HUVEC-06": [4, 3],
+    "HUVEC-07": [2, 1],
+    "HUVEC-08": [4, 3],
+    "HUVEC-09": [3, 2],
+    "HUVEC-10": [3, 2],
+    "HUVEC-11": [2, 1],
+    "HUVEC-12": [4, 3],
+    "HUVEC-13": [2, 1],
+    "HUVEC-14": [2, 1],
+    "HUVEC-15": [3, 2],
+    "HUVEC-16": [4, 3],
+    "HUVEC-17": [4, 3],
+    "HUVEC-18": [4, 3],
+    "HUVEC-19": [3, 2],
+    "HUVEC-20": [3, 2],
+    "HUVEC-21": [1, 4],
+    "HUVEC-22": [4, 3],
+    "HUVEC-23": [4, 3],
+    "HUVEC-24": [1, 4]
+  },
+  "validation_outcomes_examined_before_invalidation": false,
+  "replacement_protocol": "Discovery HUVEC-01--12, metadata-only eligibility audit in HUVEC-17--24, ten disjoint within-plate pairs, and a sealed manifest before raw validation-image analysis."
+}

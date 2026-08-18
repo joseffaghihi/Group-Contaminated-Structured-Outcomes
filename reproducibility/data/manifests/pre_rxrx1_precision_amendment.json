@@ -1,0 +1,15 @@
+{
+  "amended_at": "2026-07-31T03:18:40-04:00",
+  "amendment_scope": "descriptive primary-pair precision summary",
+  "reason": "The manuscript table reports a paired-block percentile bootstrap interval for every primary representation. The frozen implementation had inadvertently omitted the moment-registration comparator from that descriptive interval while including the other three methods.",
+  "replacement": "At nuisance seed 20260731 and for the primary pair only, moment registration now receives the same 10000 paired-block bootstrap resamples as the quotient, raw-coordinate, and finite-Euler representations. Exact randomization p-values remain the primary inferential quantities and are unchanged by this amendment.",
+  "outcome_access_statement": "This amendment was made after the independent simulation completed but before the held-out RxRx1 image analysis began. No RxRx1 outcome statistic, p-value, confidence interval, replication result, or robustness result had been computed or inspected.",
+  "selection_manifest_sha256": "c7824d090db75b049f64269cb060cb38d56818ecd4c11b196b3347c2c4ac7207",
+  "final_experiment_code_sha256": "9e2b428d306c13c58242e23d93a1688f301a68a3de6cd46410ea2bd23a649687",
+  "rxrx1_runner_sha256": "4272d25dc2e81f900102a14eb9ed769127e2c6846a437ab39813fd64fa207cd0",
+  "results_builder_sha256": "72393b4ed12f0955ea25017ddbf25335fdc29dd17f8bb2ab3ee1de6d1d9c51ce",
+  "post_amendment_test_count": 16,
+  "post_amendment_test_failures": 0,
+  "post_amendment_test_progress_sha256": "8bafd91470a5f194b6a29f2a5d91af382701ba370501af06f6d6fcd0114a0619",
+  "status": "sealed_before_heldout_rxrx1_image_analysis"
+}

@@ -1,0 +1,82 @@
+{
+  "audit_type": "independent_full_default_simulation_reproduction",
+  "created_utc": "2026-07-31T08:00:46Z",
+  "status": "passed",
+  "command": "python -u scripts/run_simulation.py --output /workspace/scratch/c78d01b81b62/causal_quotient_paper/repro_simulation.g0ZAlt/results --figures /workspace/scratch/c78d01b81b62/causal_quotient_paper/repro_simulation.g0ZAlt/figures --progress /workspace/scratch/c78d01b81b62/causal_quotient_paper/repro_simulation.g0ZAlt/progress.json",
+  "isolated_paths": {
+    "output_directory": "/workspace/scratch/c78d01b81b62/causal_quotient_paper/repro_simulation.g0ZAlt/results",
+    "figure_directory": "/workspace/scratch/c78d01b81b62/causal_quotient_paper/repro_simulation.g0ZAlt/figures",
+    "progress_json": "/workspace/scratch/c78d01b81b62/causal_quotient_paper/repro_simulation.g0ZAlt/progress.json",
+    "terminal_log": "/workspace/scratch/c78d01b81b62/causal_quotient_paper/repro_simulation.g0ZAlt/run.log"
+  },
+  "run": {
+    "defaults_used": true,
+    "tracked_steps_completed": 2000,
+    "tracked_steps_total": 2000,
+    "elapsed_seconds": 947.0709688663483,
+    "failures": 0,
+    "invariance_trials": 1000,
+    "invariance_failures": 0,
+    "full_simulation_replicates": 1000,
+    "replicates_per_effect_size": 250,
+    "effect_sizes": [
+      0.0,
+      0.35,
+      0.7,
+      1.0
+    ],
+    "randomization_assignments_per_test": 256,
+    "seed": 51907
+  },
+  "source_sha256_loaded_at_run_start": {
+    "scripts/run_simulation.py": "51a246db34a34aabdb52e80a1cd5238235f8f066f890389d03745e072a7b9284",
+    "src/cqoi/experiment.py": "da741a882bc8ee176d5655c1c1ebf50467a465d7fb7a9e448dd83131d53c557e",
+    "src/cqoi/invariants.py": "f138b1554659c8162a7b45b891ea3b470a1830a05c5d8ca3c49dc386f3e4a6d7",
+    "src/cqoi/simulation.py": "4c3d1f417a0b13fe14d4ba52e3524fb6a09c4b83880975f3f9ece9b7ec8f5f73",
+    "src/cqoi/statistics.py": "3b597db2171c002915a54b501f9337383e5591388cf5715d76cd407fc1a2b965"
+  },
+  "comparisons": {
+    "simulation_replicates_csv": {
+      "byte_identical": true,
+      "rows": 4000,
+      "cell_differences": 0,
+      "original_sha256": "c8b0bc524063ef6725bcce37dcbff410c957a03edb500226288a32b9a6374049",
+      "reproduced_sha256": "c8b0bc524063ef6725bcce37dcbff410c957a03edb500226288a32b9a6374049"
+    },
+    "simulation_summary_csv": {
+      "byte_identical": true,
+      "rows": 16,
+      "cell_differences": 0,
+      "original_sha256": "409c66680379e04d8a34494aec901690c1f77eb73edaeb45d682999322a329f9",
+      "reproduced_sha256": "409c66680379e04d8a34494aec901690c1f77eb73edaeb45d682999322a329f9"
+    },
+    "simulation_audit_json": {
+      "normalized_structurally_identical": true,
+      "normalization_removed_fields": [
+        "created_utc",
+        "outputs"
+      ],
+      "normalized_field_differences": 0,
+      "exact_field_differences": 5,
+      "exact_differences_explained_by": [
+        "created_utc",
+        "outputs.figures[0]",
+        "outputs.figures[1]",
+        "outputs.replicates",
+        "outputs.summary"
+      ],
+      "original_sha256": "35fede8ef31a8983f9b311efd1e7b3489aca2436196fe7e9c276c85e17594ca0",
+      "reproduced_sha256": "37fc06013562b95a3f6788a625bf838f17351eea813e8b2ebe2d54c42ed3d570"
+    }
+  },
+  "isolated_output_sha256": {
+    "figures/simulation_power.pdf": "988d2016cb3bd490c6e87f92fcae5d4986757fb16ff6ac6a185dc8acd11e5995",
+    "figures/simulation_power.png": "920d6840d90a2339e1a151aa2ac321ea6affc29a42928fce5e2d3abd5b291578",
+    "progress.json": "f2bf58586dd13e6dff5d64a8d94d31505738d3fb21cc1d8ee4b5305f103d75ba",
+    "results/simulation_audit.json": "37fc06013562b95a3f6788a625bf838f17351eea813e8b2ebe2d54c42ed3d570",
+    "results/simulation_replicates.csv": "c8b0bc524063ef6725bcce37dcbff410c957a03edb500226288a32b9a6374049",
+    "results/simulation_summary.csv": "409c66680379e04d8a34494aec901690c1f77eb73edaeb45d682999322a329f9",
+    "run.log": "83374e3fe00d314cfac649d9849987c874726d5be7e66c0a4cf275ad09af7423"
+  },
+  "figure_note": "The isolated PNG reproduced the initially recorded frozen PNG hash exactly. The manuscript figure was intentionally regenerated afterward for label-only corrections, so its later hash is not used as a numerical-reproduction criterion. PDF file bytes include creation metadata and are likewise not used as a numerical criterion."
+}

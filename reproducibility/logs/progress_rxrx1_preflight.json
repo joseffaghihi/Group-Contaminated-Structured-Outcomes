@@ -1,0 +1,13 @@
+{
+  "completed": 1920,
+  "elapsed_seconds": 1.4051289558410645,
+  "eta_seconds": 0.0,
+  "failures": 0,
+  "fraction": 1.0,
+  "message": "all 1,920 confirmation PNGs match the integrity manifest",
+  "stage": "verify-rxrx1-analysis-inputs",
+  "started_at": 1785487588.1426754,
+  "status": "completed",
+  "total": 1920,
+  "updated_at": 1785487589.5478044
+}

@@ -1,0 +1,55 @@
+{
+  "ci_coverage": {
+    "evaluated": false,
+    "reason": "The unbiased MMD-squared estimator is degenerate at the null; a naive percentile bootstrap interval does not have generally valid null coverage. Exact randomization size is evaluated instead."
+  },
+  "config": {
+    "alpha": 0.05,
+    "ect_levels": 25,
+    "ect_min_component_size": 4,
+    "effect_sizes": [
+      0.0,
+      0.35,
+      0.7,
+      1.0
+    ],
+    "experiment_pairs": 8,
+    "image_size": 28,
+    "invariance_audit_trials": 1000,
+    "max_integer_shift": 5,
+    "nuclear_channel": 0,
+    "padding": 8,
+    "replicates": 250,
+    "seed": 51907
+  },
+  "created_utc": "2026-07-31T07:17:19.916704+00:00",
+  "exact_group": "product action (Z^2 semidirect C4)^2 on two-site finite-support arrays",
+  "failures": [],
+  "invariance_audit": {
+    "bytewise_equal_for_all_trials": true,
+    "failure_records": [],
+    "failures": 0,
+    "trials": 1000
+  },
+  "null_definition": "Each block contains two fixed units and a fair within-block assignment. At effect size zero every unit satisfies Y(1)=Y(0) byte-for-byte; treatment- and morphology-dependent sitewise acquisition is then applied.",
+  "outputs": {
+    "figures": [
+      "/workspace/scratch/c78d01b81b62/causal_quotient_paper/paper/figures/simulation_power.png",
+      "/workspace/scratch/c78d01b81b62/causal_quotient_paper/paper/figures/simulation_power.pdf"
+    ],
+    "replicates": "/workspace/scratch/c78d01b81b62/causal_quotient_paper/results/simulation/simulation_replicates.csv",
+    "summary": "/workspace/scratch/c78d01b81b62/causal_quotient_paper/results/simulation/simulation_summary.csv"
+  },
+  "software": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.12.13-x86_64-with-glibc2.39",
+    "python": "3.12.13 (main, Mar  3 2026, 14:59:34) [Clang 21.1.4 ]"
+  },
+  "status": "completed",
+  "test": {
+    "alpha": 0.05,
+    "randomization": "all 2^8 paired label swaps",
+    "statistic": "unbiased RBF-kernel MMD squared"
+  }
+}

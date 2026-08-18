@@ -1,0 +1,23 @@
+{
+  "command": [
+    "python",
+    "scripts/build_extension_results_tex.py",
+    "--sensitivity",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extensions_rerun/rosenbaum_sensitivity.csv",
+    "--sensitivity-summary",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extensions_rerun/rosenbaum_summary.json",
+    "--persistence-summary",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extensions_rerun/persistence_summary.json",
+    "--audit",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extensions_rerun/expert_review_extension_audit.json",
+    "--output",
+    "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extension_results_from_rerun.tex"
+  ],
+  "command_shell_escaped": "python scripts/build_extension_results_tex.py --sensitivity /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extensions_rerun/rosenbaum_sensitivity.csv --sensitivity-summary /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extensions_rerun/rosenbaum_summary.json --persistence-summary /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extensions_rerun/persistence_summary.json --audit /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extensions_rerun/expert_review_extension_audit.json --output /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extension_results_from_rerun.tex",
+  "cwd": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/workcopy",
+  "elapsed_seconds": 0.2979482859991549,
+  "ended_utc": "2026-08-18T16:28:38.717988+00:00",
+  "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+  "returncode": 0,
+  "started_utc": "2026-08-18T16:28:38.420201+00:00"
+}

@@ -1,0 +1,8 @@
+gamma,lower_probability,upper_probability,lower_endpoint_bits,upper_endpoint_bits,box_vertices,event_assignments,total_assignments,observed_statistic,observed_bits,tail,tolerance
+1.0,0.007812500000000002,0.007812500000000002,"[0, 0, 0, 0, 0, 0, 0, 0]","[0, 0, 0, 0, 0, 0, 0, 0]",256,2,256,0.003643781768319254,"[0, 1, 0, 1, 0, 1, 0, 1]",greater_than_or_equal_with_fixed_numerical_tolerance,1e-12
+1.1,0.007741878983954691,0.008311346268128593,"[0, 0, 0, 0, 0, 0, 0, 0]","[0, 1, 0, 1, 0, 1, 0, 1]",256,2,256,0.003643781768319254,"[0, 1, 0, 1, 0, 1, 0, 1]",greater_than_or_equal_with_fixed_numerical_tolerance,1e-12
+1.25,0.007433783400134006,0.01059688146746415,"[0, 0, 0, 0, 0, 0, 0, 0]","[0, 1, 0, 1, 0, 1, 0, 1]",256,2,256,0.003643781768319254,"[0, 1, 0, 1, 0, 1, 0, 1]",greater_than_or_equal_with_fixed_numerical_tolerance,1e-12
+1.5,0.006635519999999998,0.017451519999999995,"[0, 0, 0, 0, 0, 0, 0, 0]","[0, 1, 0, 1, 0, 1, 0, 1]",256,2,256,0.003643781768319254,"[0, 1, 0, 1, 0, 1, 0, 1]",greater_than_or_equal_with_fixed_numerical_tolerance,1e-12
+2.0,0.004877305288827925,0.03917085810089926,"[0, 0, 0, 0, 0, 0, 0, 0]","[0, 1, 0, 1, 0, 1, 0, 1]",256,2,256,0.003643781768319254,"[0, 1, 0, 1, 0, 1, 0, 1]",greater_than_or_equal_with_fixed_numerical_tolerance,1e-12
+3.0,0.0024719238281249996,0.10012817382812501,"[0, 0, 0, 0, 0, 0, 0, 0]","[0, 1, 0, 1, 0, 1, 0, 1]",256,2,256,0.003643781768319254,"[0, 1, 0, 1, 0, 1, 0, 1]",greater_than_or_equal_with_fixed_numerical_tolerance,1e-12
+5.0,0.0007442177259564091,0.2325686347355586,"[0, 0, 0, 0, 0, 0, 0, 0]","[0, 1, 0, 1, 0, 1, 0, 1]",256,2,256,0.003643781768319254,"[0, 1, 0, 1, 0, 1, 0, 1]",greater_than_or_equal_with_fixed_numerical_tolerance,1e-12

@@ -1,0 +1,5 @@
+method,false_positives,tests,false_positive_fraction,clopper_pearson_95_lower,clopper_pearson_95_upper
+euler_secondary,0,200,0.0,0.0,0.01827534035513624
+moment_registration,0,200,0.0,0.0,0.01827534035513624
+quotient_exact,0,200,0.0,0.0,0.01827534035513624
+raw_coordinates,200,200,1.0,0.9817246596448638,1.0

@@ -1,0 +1,49 @@
+{
+  "cell_type": "HUVEC",
+  "discovery_direction_agreement": 1.0,
+  "discovery_experiments": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "discovery_raw_score": 6.688886065566407,
+  "discovery_stable_score": 6.688886065566407,
+  "eligible_sirna_count": 1062,
+  "embeddings_path": "/workspace/scratch/c78d01b81b62/data/raw/rxrx1/rxrx1/embeddings.csv",
+  "feature_count": 128,
+  "manifest_sha256": "computed-in-sidecar",
+  "metadata_path": "/workspace/scratch/c78d01b81b62/data/raw/rxrx1/rxrx1/metadata.csv",
+  "selected_sirna_ids": [
+    621,
+    749
+  ],
+  "selected_sirnas": [
+    "s20818",
+    "s18763"
+  ],
+  "selection_rule": "maximum discovery-only robust centroid-separation/within-batch-variance among the 96 most extreme eligible siRNAs, multiplied by leave-one-experiment-out direction agreement",
+  "validation_experiments": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "validation_outcomes_used_for_selection": false
+}

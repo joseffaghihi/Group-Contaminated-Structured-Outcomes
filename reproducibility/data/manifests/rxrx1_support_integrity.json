@@ -1,0 +1,34 @@
+{
+  "completed_at_utc": "2026-08-18T16:10:25.075092+00:00",
+  "data_root": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_support",
+  "download_api": "Google Cloud Storage JSON API with alt=media",
+  "failures": [],
+  "files": [
+    {
+      "bytes": 10094584,
+      "media_url": "https://storage.googleapis.com/download/storage/v1/b/rxrx/o/rxrx1%2Frxrx1-metadata.zip?alt=media",
+      "name": "metadata",
+      "path": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_support/rxrx1/metadata.csv",
+      "sha256": "799ed719d2be136db29fef6fcb7a51ceb94d1de9d43421a49b16409329a2f1b7",
+      "source": "existing sealed-hash match",
+      "verified_against": "sealed selection-manifest extracted-file SHA-256"
+    },
+    {
+      "bytes": 172102542,
+      "media_url": "https://storage.googleapis.com/download/storage/v1/b/rxrx/o/rxrx1%2Frxrx1-dl-embeddings.zip?alt=media",
+      "name": "embeddings",
+      "path": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_support/rxrx1/embeddings.csv",
+      "sha256": "e38f50b74c45682ec9ce7e6407b891c953c27217be5e39b187d289320395a192",
+      "source": "existing sealed-hash match",
+      "verified_against": "sealed selection-manifest extracted-file SHA-256"
+    }
+  ],
+  "mode": "verify-only",
+  "official_source_page": "https://www.rxrx.ai/rxrx1",
+  "schema_version": "1.0",
+  "selection_manifest": {
+    "path": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/workcopy/data/manifests/selection_manifest.json",
+    "sha256": "b6f350ca96fb9e7a6271845dd6e432ed9dca556144a1a332d8f5af168642b968"
+  },
+  "status": "completed"
+}

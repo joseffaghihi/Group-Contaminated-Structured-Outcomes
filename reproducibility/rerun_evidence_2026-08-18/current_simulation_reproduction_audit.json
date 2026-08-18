@@ -1,0 +1,90 @@
+{
+  "audit_type": "current_source_full_default_simulation_reproduction",
+  "created_utc": "2026-08-18T16:29:39Z",
+  "status": "passed",
+  "command": "env PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/mplconfig TMPDIR=/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/tmp python scripts/run_simulation.py --output /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/full_simulation --figures /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/full_simulation_figures --progress /workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/full_simulation_progress.json",
+  "isolated_paths": {
+    "source_workcopy": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/workcopy",
+    "output_directory": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/full_simulation",
+    "figure_directory": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/full_simulation_figures",
+    "progress_json": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/full_simulation_progress.json"
+  },
+  "run": {
+    "defaults_used": true,
+    "tracked_steps_completed": 2000,
+    "tracked_steps_total": 2000,
+    "elapsed_seconds_progress_record": 254.75316071510315,
+    "elapsed_seconds_wall_observed": 255.773,
+    "failures": 0,
+    "invariance_trials": 1000,
+    "invariance_failures": 0,
+    "full_simulation_replicates": 1000,
+    "replicates_per_effect_size": 250,
+    "effect_sizes": [
+      0.0,
+      0.35,
+      0.7,
+      1.0
+    ],
+    "randomization_assignments_per_test": 256,
+    "seed": 51907
+  },
+  "environment": {
+    "python": "3.12.13 (main, Aug  7 2026, 02:25:39) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.39"
+  },
+  "source_sha256_loaded_at_run_start": {
+    "scripts/run_simulation.py": "51a246db34a34aabdb52e80a1cd5238235f8f066f890389d03745e072a7b9284",
+    "src/cqoi/experiment.py": "da741a882bc8ee176d5655c1c1ebf50467a465d7fb7a9e448dd83131d53c557e",
+    "src/cqoi/invariants.py": "fdf2fb64cc577cbec4e3fce412dc7ff54f84f198ac48ebd492fdd2b35832c3ea",
+    "src/cqoi/simulation.py": "ad3f4a697dc41f7307ff41943f2c3eb84afcd7dfd37f2b0d01d62edce966cbac",
+    "src/cqoi/statistics.py": "3b597db2171c002915a54b501f9337383e5591388cf5715d76cd407fc1a2b965"
+  },
+  "comparisons": {
+    "simulation_replicates_csv": {
+      "byte_identical": true,
+      "rows": 4000,
+      "cell_differences": 0,
+      "original_sha256": "c8b0bc524063ef6725bcce37dcbff410c957a03edb500226288a32b9a6374049",
+      "reproduced_sha256": "c8b0bc524063ef6725bcce37dcbff410c957a03edb500226288a32b9a6374049",
+      "archived_reference_sha256": "c8b0bc524063ef6725bcce37dcbff410c957a03edb500226288a32b9a6374049"
+    },
+    "simulation_summary_csv": {
+      "byte_identical": true,
+      "rows": 16,
+      "cell_differences": 0,
+      "original_sha256": "409c66680379e04d8a34494aec901690c1f77eb73edaeb45d682999322a329f9",
+      "reproduced_sha256": "409c66680379e04d8a34494aec901690c1f77eb73edaeb45d682999322a329f9",
+      "archived_reference_sha256": "409c66680379e04d8a34494aec901690c1f77eb73edaeb45d682999322a329f9"
+    },
+    "simulation_audit_json": {
+      "normalized_structurally_identical": true,
+      "normalization_removed_fields": [
+        "created_utc",
+        "outputs",
+        "software"
+      ],
+      "normalized_field_differences": 0,
+      "exact_differences_explained_by": [
+        "created_utc",
+        "outputs",
+        "software.python",
+        "software.platform"
+      ],
+      "original_sha256": "c8bc1381317b0cc27d74c6640f800e38978d54452637a90f36357d13221afd1a",
+      "reproduced_sha256": "c8bc1381317b0cc27d74c6640f800e38978d54452637a90f36357d13221afd1a",
+      "archived_reference_sha256": "35fede8ef31a8983f9b311efd1e7b3489aca2436196fe7e9c276c85e17594ca0"
+    }
+  },
+  "isolated_output_sha256": {
+    "figures/simulation_power.pdf": "675922074215dc6b48a1f18dd20613ae18d02f12618693e9cedeabd4042eecde",
+    "figures/simulation_power.png": "00f91301df4a4eda72b924343e3e60a99cf0905c4a655f0db5e88564352fe7de",
+    "progress.json": "837d5a83b690fe891fb852508c15df06792127e9765d8b271daa52050b0ce73f",
+    "results/simulation_audit.json": "c8bc1381317b0cc27d74c6640f800e38978d54452637a90f36357d13221afd1a",
+    "results/simulation_replicates.csv": "c8b0bc524063ef6725bcce37dcbff410c957a03edb500226288a32b9a6374049",
+    "results/simulation_summary.csv": "409c66680379e04d8a34494aec901690c1f77eb73edaeb45d682999322a329f9"
+  },
+  "figure_note": "The current-source PNG is byte-identical to the archived manuscript PNG. PDF bytes vary only in generated metadata/container fields; rendering at 150 dpi is byte-identical. Numerical CSVs are byte-identical."
+}

@@ -1,0 +1,12 @@
+{
+  "amended_at": "2026-07-31T03:05:08-04:00",
+  "amendment_scope": "hidden acquisition stress-test generator only",
+  "reason": "An algebraic audit showed that adding the treatment label modulo four to an approximately uniform hash draw leaves the marginal orientation distribution approximately uniform. The original generator therefore did not substantiate the intended informative-acquisition stress test.",
+  "replacement": "The final generator uses treatment-specific translation signs and a conditionally disjoint half-turn orientation shift, with magnitudes and within-half orientation depending on the frozen hash and a coordinate-free morphology functional. The transformation remains an element of the declared product lattice rigid-motion group.",
+  "outcome_access_statement": "The amendment was made before any held-out RxRx1 image was analyzed and before any final simulation result table was created or inspected. A prematurely started simulation process was stopped after progress reported 36 of 1000 sharp-null replicates; it wrote no result table, and its log and progress files were overwritten by the final frozen run.",
+  "selection_manifest_sha256": "c7824d090db75b049f64269cb060cb38d56818ecd4c11b196b3347c2c4ac7207",
+  "final_experiment_code_sha256": "0012b1956a906fb64ab46a9e1e5ecaa8e440e3740e39e3a7490bcb1a6d7f25ea",
+  "final_simulation_code_sha256": "4c3d1f417a0b13fe14d4ba52e3524fb6a09c4b83880975f3f9ece9b7ec8f5f73",
+  "final_simulation_runner_sha256": "51a246db34a34aabdb52e80a1cd5238235f8f066f890389d03745e072a7b9284",
+  "status": "sealed_before_final_simulation_and_heldout_image_analysis"
+}

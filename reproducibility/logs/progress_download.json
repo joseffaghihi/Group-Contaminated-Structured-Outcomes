@@ -1,0 +1,13 @@
+{
+  "completed": 1920,
+  "elapsed_seconds": 1.7104437351226807,
+  "eta_seconds": 0.0,
+  "failures": 0,
+  "fraction": 1.0,
+  "message": "verified 1920 PNG files",
+  "stage": "verify-rxrx1-subset-crc-sha256",
+  "started_at": 1785487510.6011708,
+  "status": "completed",
+  "total": 1920,
+  "updated_at": 1785487512.3116145
+}

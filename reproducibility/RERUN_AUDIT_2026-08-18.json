@@ -1,0 +1,202 @@
+{
+  "schema_version": "1.0",
+  "audit_date": "2026-08-18",
+  "status": "passed",
+  "scope": "current-source end-to-end scientific and manuscript rerun",
+  "analysis_source_manifest": {
+    "path": "CURRENT_ANALYSIS_SOURCE_MANIFEST.sha256",
+    "sha256": "f776624d9ad56525a4b39ecd418687b2867ae981f7ef6da7d8d5ad63da736a1d",
+    "verification": "all entries passed sha256sum -c"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "pillow_observed": "12.3.0",
+    "pillow_pinned": "12.2.0",
+    "matplotlib": "3.10.8",
+    "pillow_patch_level_disposition": "no effect: every image-derived scientific CSV and PNG was byte-identical"
+  },
+  "stages": {
+    "scientific_tests": {
+      "command": "python scripts/run_tests.py",
+      "status": "passed",
+      "passed": 45,
+      "total": 45,
+      "failures": 0,
+      "elapsed_seconds": 1.862666172
+    },
+    "simulation": {
+      "command": "python scripts/run_simulation.py",
+      "status": "passed",
+      "failures": 0,
+      "elapsed_seconds": 255.773,
+      "tracked_steps": 2000,
+      "orbit_audit_trials": 1000,
+      "orbit_audit_failures": 0,
+      "monte_carlo_replicates": 1000,
+      "randomization_assignments_per_test": 256,
+      "comparisons": {
+        "simulation_replicates.csv": {
+          "sha256": "c8b0bc524063ef6725bcce37dcbff410c957a03edb500226288a32b9a6374049",
+          "byte_identical_to_archive": true
+        },
+        "simulation_summary.csv": {
+          "sha256": "409c66680379e04d8a34494aec901690c1f77eb73edaeb45d682999322a329f9",
+          "byte_identical_to_archive": true
+        },
+        "simulation_audit.json": {
+          "normalized_structurally_identical": true,
+          "normalization_excluded": [
+            "created_utc",
+            "output paths",
+            "software Python build",
+            "software platform"
+          ]
+        },
+        "simulation_power.png": {
+          "sha256": "00f91301df4a4eda72b924343e3e60a99cf0905c4a655f0db5e88564352fe7de",
+          "byte_identical_to_archive": true
+        },
+        "simulation_power.pdf": {
+          "byte_identical_to_archive": false,
+          "rendered_content_identical_at_150_dpi": true,
+          "difference": "generated PDF container metadata"
+        }
+      }
+    },
+    "support_files": {
+      "command": "python scripts/fetch_rxrx1_support_files.py --verify-only",
+      "status": "passed",
+      "failures": 0,
+      "elapsed_seconds": 0.194259645,
+      "selection_manifest_sha256": "b6f350ca96fb9e7a6271845dd6e432ed9dca556144a1a332d8f5af168642b968",
+      "metadata": {
+        "bytes": 10094584,
+        "sha256": "799ed719d2be136db29fef6fcb7a51ceb94d1de9d43421a49b16409329a2f1b7"
+      },
+      "embeddings": {
+        "bytes": 172102542,
+        "sha256": "e38f50b74c45682ec9ce7e6407b891c953c27217be5e39b187d289320395a192"
+      }
+    },
+    "discovery_selector": {
+      "command": "python scripts/select_rxrx1_pair.py --manifest <isolated-output>",
+      "status": "passed",
+      "failures": 0,
+      "elapsed_seconds": 3.761883957,
+      "ordered_pairs_identical": true,
+      "scores_identical": true,
+      "plate_maps_identical": true,
+      "expected_provenance_differences": [
+        "completion timestamp",
+        "absolute source paths",
+        "current selector source hash"
+      ]
+    },
+    "rxrx1_image_subset": {
+      "command": "python scripts/fetch_rxrx1_subset.py",
+      "status": "passed",
+      "failures": 0,
+      "png_files": 1920,
+      "gates": [
+        "path",
+        "byte size",
+        "CRC32",
+        "SHA-256",
+        "PNG signature",
+        "no missing files",
+        "no extra PNGs"
+      ],
+      "all_file_records_identical_to_archive": true,
+      "aggregate_digest_identical": true,
+      "total_bytes_identical": true,
+      "new_manifest_sha256": "63cf46acc1a27cdac01173cd31d68996858ac02f6f19243d7eb08cf4d60bde48",
+      "manifest_hash_difference": "completion time, downloaded/reused counts and absolute selection-manifest path only"
+    },
+    "rxrx1_confirmation": {
+      "command": "python scripts/run_rxrx1_experiment.py",
+      "status": "passed",
+      "failures": 0,
+      "elapsed_seconds": 228.573131792,
+      "tracked_steps": 223,
+      "nuisance_seeds": 20,
+      "input_pngs_preflighted": 1920,
+      "scientific_csvs_byte_identical": true,
+      "comparisons": {
+        "pair_seed_results.csv": "7daf049b643a869f77ee5aaee3cdee15644ea7805c16a55052217b85f2420626",
+        "acquisition_null_results.csv": "6a093b8768ff16263fe009b46d1333fd6fc52bb336ead5ddf1452c38e07ab632",
+        "acquisition_null_false_positive_summary.csv": "6b4f67c5dd3ec449c13cefccc4db7f844230ddbf56cfae8f9cd210f691238427",
+        "approximate_action_stress.csv": "bf300147876cb8635679fedb2eb833d76e63119f856fb25bd89c2b37a6a66ade",
+        "clean_contaminated_equivalence.csv": "239d950bee3676e5d55bf2c6773720400191362134ef62ee59ccdd8cb0603a3e",
+        "hidden_nuisance_truth_NOT_ANALYSIS.csv": "ae2cc341dc9e05fc2e8f48a38b7e1383fba63c278fa85d9153b0f2875e00fd75"
+      },
+      "figure_png": {
+        "sha256": "d831d0b2a3395c9808ffc9c645d74d6679f1d56cebd9ed42988a850b556ebe20",
+        "byte_identical_to_archive": true
+      },
+      "figure_pdf": {
+        "byte_identical_to_archive": false,
+        "rendered_content_identical_at_150_dpi": true,
+        "difference": "generated PDF container metadata"
+      },
+      "summary_comparison": {
+        "scientific_configuration_identical": true,
+        "scientific_output_hashes_identical": true,
+        "analysed_source_hashes_identical": true,
+        "expected_differences": [
+          "timestamp",
+          "absolute paths",
+          "Python build string",
+          "host platform"
+        ]
+      }
+    },
+    "post_outcome_extensions": {
+      "command": "python scripts/run_expert_review_extensions.py",
+      "status": "passed",
+      "failures": 0,
+      "elapsed_seconds": 2.648504378,
+      "tracked_steps": 252,
+      "scientific_files_byte_identical": true,
+      "comparisons": {
+        "rosenbaum_sensitivity.csv": "c9b8ca543316e27086267a18a90e0ae6944567d3dae3407c1ddd2f8f9433b21a",
+        "persistence_stability.csv": "9d4c872e188bc39a3fedffe2d946859aa963df3a4eb4011055a443aae5bcbb32",
+        "rosenbaum_summary.json": "db0bcd9870b773d65db91bdf3cfd3a45a3da346162d017fbecb0abf7644e72c8",
+        "persistence_summary.json": "4338c098b174c84b22799e4157d75ae3a70ff1f3ce13ff8a0c2885d3983a7e0f"
+      }
+    },
+    "generated_tex": {
+      "core_results": {
+        "built_from_fresh_simulation_and_rxrx1_outputs": true,
+        "sha256": "7dd075b2d5ce0eabc3515d950381278beb7d93426e31d3a71971c4f6a4a96be1",
+        "byte_identical_to_archive": true
+      },
+      "extension_results": {
+        "all_numeric_macros_identical": true,
+        "fresh_audit_sha256_macro": "63e770924eb4c3c45f0081d9b3fe5109bac4b029fee6056511f3d806b79c65b5",
+        "frozen_audit_sha256_macro": "7928f075dd02630e2c735a89bbd64e8a76f8b9191b2785cfe8de6542462c0882",
+        "only_difference": "RxExtensionAuditHash provenance macro",
+        "frozen_provenance_build_sha256": "92d06e0e5a0049d5827be14080211fba232dc5248c4477289a76fb3f1935e37b"
+      }
+    },
+    "arxiv_release": {
+      "command": "python scripts/audit_arxiv_release.py --compile",
+      "status": "passed",
+      "generated_results_inputs_byte_identical": true,
+      "generated_figure_byte_identical": true,
+      "forbidden_build_artifacts": 0,
+      "isolated_compile": "passed",
+      "pages": 25,
+      "latex_warnings": 0,
+      "visual_pages_inspected": 25
+    }
+  },
+  "conclusion": {
+    "principal_numerical_changes": 0,
+    "scientific_output_mismatches": 0,
+    "expected_provenance_only_differences": true,
+    "paper_code_consistency": "passed"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "completed": 223,
+  "elapsed_seconds": 453.8595960140228,
+  "eta_seconds": 0.0,
+  "failures": 0,
+  "fraction": 1.0,
+  "message": "RxRx1 experiment completed",
+  "stage": "rxrx1-experiment",
+  "started_at": 1785487590.9213893,
+  "status": "completed",
+  "total": 223,
+  "updated_at": 1785488044.7809854
+}

@@ -1,0 +1,32 @@
+{
+  "amended_at": "2026-07-31T04:56:49-04:00",
+  "analysis_completed_at_utc": "2026-07-31T08:54:04.722234+00:00",
+  "status": "post_analysis_reporting_correction_no_recomputation",
+  "scope": "labels and placement of the prespecified primary-pair paired-block bootstrap output",
+  "trigger": "After the frozen RxRx1 run, all four original U-statistics lay below the corresponding empirical 2.5th percentile of the paired-block bootstrap statistic.",
+  "mathematical_reason": "Resampling eight block identifiers with replacement duplicates observations. Applying the conventional observation-level U-statistic to duplicated rows changes its diagonal-exclusion structure: duplicate draws enter off-diagonal within-arm sums as self-kernel terms and reweight same-block cross-arm terms. The resulting small-sample bootstrap distribution need not be centered on the original statistic.",
+  "reporting_decision": [
+    "The four frozen quantile pairs are preserved without recomputation.",
+    "They are labeled as the empirical 2.5th and 97.5th percentiles of the paired-block bootstrap statistic.",
+    "They are not labeled or interpreted as confidence intervals, coverage intervals, or precision bounds.",
+    "The sole primary test remains the complete paired-swap test for the canonical quotient endpoint.",
+    "The Euler paired-swap value is labeled unadjusted secondary; raw and moment-registration values remain diagnostics."
+  ],
+  "numerical_analysis_changed": false,
+  "exact_statistics_changed": false,
+  "exact_p_values_changed": false,
+  "bootstrap_values_changed": false,
+  "multiplicity_adjustment_changed": false,
+  "frozen_artifacts": {
+    "paper/results.tex": "90be230708091e7580622c744521eda15127821272a09c2a3c4de967bc1df9df",
+    "results/rxrx1/pair_seed_results.csv": "7daf049b643a869f77ee5aaee3cdee15644ea7805c16a55052217b85f2420626",
+    "results/rxrx1/experiment_summary.json": "669d7343ab5fec2275a4a622ec8d36260ac634670c98a086189d4b04bdd942e0",
+    "src/cqoi/experiment.py": "da741a882bc8ee176d5655c1c1ebf50467a465d7fb7a9e448dd83131d53c557e",
+    "src/cqoi/statistics.py": "3b597db2171c002915a54b501f9337383e5591388cf5715d76cd407fc1a2b965"
+  },
+  "reporting_artifacts_after_correction": {
+    "paper/main.pdf": "806b04f76ec1cd8195fe2491873a2d18e1c68a6063da0633682712c8d0a4f3f8",
+    "paper/main.tex": "f76967a9a3dde2a55b78d0fdaa41367678b79218b021206964e7286de885b25c",
+    "README.md": "a8e3a5daf86cc7554f5d278c576c40b3da4b4e2b7ebb4e98047753fa1b572f55"
+  }
+}

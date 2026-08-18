@@ -1,0 +1,13 @@
+{
+  "completed": 2000,
+  "elapsed_seconds": 746.4156799316406,
+  "eta_seconds": 0.0,
+  "failures": 0,
+  "fraction": 1.0,
+  "message": "simulation completed",
+  "stage": "simulation",
+  "started_at": 1785481493.5223424,
+  "status": "completed",
+  "total": 2000,
+  "updated_at": 1785482239.9380224
+}

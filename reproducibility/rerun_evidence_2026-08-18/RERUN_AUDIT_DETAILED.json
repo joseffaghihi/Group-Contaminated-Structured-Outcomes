@@ -1,0 +1,448 @@
+{
+  "schema_version": "1.0",
+  "audit_type": "current_source_end_to_end_reproduction",
+  "created_utc": "2026-08-18T16:42:30Z",
+  "status": "passed_with_non_numerical_notes",
+  "scope": {
+    "archived_source_read_only": "/workspace/scratch/c78d01b81b62/audit_workspace/repro/causal_quotient_paper",
+    "isolated_workcopy": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/workcopy",
+    "output_root": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun",
+    "core_source_files_modified": false,
+    "final_release_modified": false,
+    "raw_rxrx1_data_in_release": false
+  },
+  "environment": {
+    "python": "3.12.13 (main, Aug  7 2026, 02:25:39) [Clang 22.1.3 ]",
+    "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0",
+      "Pillow": "12.3.0",
+      "matplotlib": "3.10.8"
+    },
+    "requirements_pins": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0",
+      "Pillow": "12.2.0",
+      "matplotlib": "3.10.8"
+    },
+    "pillow_pin_assessment": "The host had Pillow 12.3.0 rather than the 12.2.0 pin. Every image-derived scientific CSV and the RxRx1 PNG were nevertheless byte-identical to the frozen artifacts, and both PDFs rasterized identically. The version difference therefore had no observed effect; a downgrade trial was not triggered because no numerical or pixel mismatch arose.",
+    "tex": {
+      "pdftex": "3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)",
+      "bibtex": "0.99d"
+    }
+  },
+  "comparison_rules": {
+    "numerical_tables_and_tex": "Require byte-for-byte equality and identical SHA-256.",
+    "png_figures": "Require byte-for-byte and pixel equality.",
+    "pdf_figures": "Record byte hashes; if container bytes differ, require byte-identical rasterization at 150 dpi.",
+    "json_audits": "Compare scientific/configuration fields after removing only enumerated runtime metadata such as timestamps, absolute output paths, Python build string, and platform.",
+    "selection_manifest": "Require exact ordered pairs, siRNA identities, scores, plate maps, statistical plan, and source-file hashes; allow only seal time, absolute source paths, and the current selector-source hash to differ.",
+    "image_integrity_manifest": "Require identical ordered per-file path, byte count, CRC32, and SHA-256 for all 1,920 PNGs, plus identical total bytes and aggregate path/SHA digest; allow run time, absolute selection path, and downloaded/reused counters to differ."
+  },
+  "source_sha256": {
+    "requirements.txt": "92cc03c3375f746ea5f72920c7d7c6f1d01f388060e95b3fdba420e54cc0ec4b",
+    "README.md": "dad66e046d26ead3e77b7f2c65eb7a6b71aa8e194715deb89a00b2dc3b00d1e0",
+    "scripts/run_tests.py": "e481b7b9e6607e33f227615d51bf11d3660936afc7c79a6f67bfd1752bc78d4f",
+    "scripts/run_simulation.py": "51a246db34a34aabdb52e80a1cd5238235f8f066f890389d03745e072a7b9284",
+    "scripts/select_rxrx1_pair.py": "694051ad9cda9abab9651d425350ee672721ebe5c94f525b151e5161fe19d67c",
+    "scripts/fetch_rxrx1_support_files.py": "85ca78c285f1593473f00a6e2eea6e7a43cc878705578e03d4df225670271ef7",
+    "scripts/fetch_rxrx1_subset.py": "606bb4d4da86c8451b119265008a920038922f81712b7284ed2b425c79cadb2b",
+    "scripts/run_rxrx1_experiment.py": "952f625d34bf27dadf09ecb29704743c670dbda66b565c63e2325018b6e79fd4",
+    "scripts/run_expert_review_extensions.py": "628f35e927f4591372075d7143c1fd7a76596f65c3e9b6f5329ade57f5d88c1a",
+    "scripts/build_results_tex.py": "35d5eacdf9c602e8d6cd79a3dbfec1d877b0f55a744bb0560d3d479df87aa6aa",
+    "scripts/build_extension_results_tex.py": "3290f53caef0c76ca5bf7880cc192c8d1f76e6fd37e137245695419808facbe0",
+    "src/cqoi/experiment.py": "da741a882bc8ee176d5655c1c1ebf50467a465d7fb7a9e448dd83131d53c557e",
+    "src/cqoi/invariants.py": "fdf2fb64cc577cbec4e3fce412dc7ff54f84f198ac48ebd492fdd2b35832c3ea",
+    "src/cqoi/simulation.py": "ad3f4a697dc41f7307ff41943f2c3eb84afcd7dfd37f2b0d01d62edce966cbac",
+    "src/cqoi/statistics.py": "3b597db2171c002915a54b501f9337383e5591388cf5715d76cd407fc1a2b965",
+    "src/cqoi/selection.py": "8470713a94355b27bc0272d77435def4e4f7967c0e09c54d1049282d69910657",
+    "src/cqoi/persistence.py": "1d642c83da2c9912608bf0c9a3bc91b19fcc4a731be7b9bc2036ffb46902c8ed",
+    "src/cqoi/sensitivity.py": "c7598216e757979230bbe4f781aba2d120e67b90c34cc92d472dd255c8b36a0b",
+    "src/cqoi/remote_zip.py": "8fb0aafee37688f613e4ccbb794657c6a652437ad3b3fa7bf282ffca8e216a1f"
+  },
+  "stages": {
+    "unit_tests": {
+      "portable_command": "python scripts/run_tests.py",
+      "returncode": 0,
+      "elapsed_seconds_wall": 1.8626661719990807,
+      "tests_passed": 45,
+      "tests_total": 45,
+      "failures": 0,
+      "log": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/tests_rerun.log",
+      "log_sha256": "3735f6a36a23b4dedee6cea0b30906852f18be5075b0d35fdf1c59cc7831c6a6",
+      "timing_record": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/tests_rerun_timing.json",
+      "progress_record": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/workcopy/logs/progress_tests.json"
+    },
+    "rxrx1_support_fetch": {
+      "portable_command": "python scripts/fetch_rxrx1_support_files.py --selection data/manifests/selection_manifest.json --data-root <rxrx1_support> --progress <progress_support_fetch.json> --integrity-manifest <rxrx1_support_integrity_rerun.json>",
+      "status": "completed",
+      "elapsed_seconds_progress": 15.524000883102417,
+      "failures": 0,
+      "network_access": "available; official Google Cloud Storage JSON alt=media endpoints succeeded",
+      "integrity_audit": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_support_integrity_rerun.json",
+      "selection_manifest_sha256": "b6f350ca96fb9e7a6271845dd6e432ed9dca556144a1a332d8f5af168642b968",
+      "metadata": {
+        "bytes": 10094584,
+        "sha256": "799ed719d2be136db29fef6fcb7a51ceb94d1de9d43421a49b16409329a2f1b7"
+      },
+      "embeddings": {
+        "bytes": 172102542,
+        "sha256": "e38f50b74c45682ec9ce7e6407b891c953c27217be5e39b187d289320395a192"
+      }
+    },
+    "rxrx1_support_verify_only": {
+      "portable_command": "python scripts/fetch_rxrx1_support_files.py --selection data/manifests/selection_manifest.json --data-root <rxrx1_support> --progress <progress_support_verify_only.json> --integrity-manifest <rxrx1_support_integrity_verify_only.json> --verify-only",
+      "returncode": 0,
+      "elapsed_seconds_wall": 0.19425964500078408,
+      "failures": 0,
+      "integrity_audit": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_support_integrity_verify_only.json",
+      "integrity_audit_sha256": "dbfe6c6db93c4b0032f8e531de4b06d86eb9753a154387e63d90deb1a6812235",
+      "log": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/support_verify_only.log",
+      "timing_record": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/support_verify_only_timing.json"
+    },
+    "discovery_only_selection": {
+      "portable_command": "python scripts/select_rxrx1_pair.py --metadata <metadata.csv> --embeddings <embeddings.csv> --manifest <selection_manifest_rerun.json> --progress <progress_selection_rerun.json>",
+      "returncode": 0,
+      "elapsed_seconds_wall": 3.761883957000464,
+      "failures": 0,
+      "frozen_manifest_sha256": "b6f350ca96fb9e7a6271845dd6e432ed9dca556144a1a332d8f5af168642b968",
+      "rerun_manifest_sha256": "092d08f7964b4f1fa398874adb5ab11f50d7fa9246fa88c0533da0dc08671cd7",
+      "ordered_pairs_scores_and_plate_maps_exact": true,
+      "pair_count": 10,
+      "scientific_field_differences": 0,
+      "allowed_metadata_differences": [
+        "sealed_at_utc",
+        "source_files.*.path",
+        "selection_code_sha256.scripts/select_rxrx1_pair.py"
+      ],
+      "frozen_selector_sha256": "b18ac99dd1b9019a737aa5b281e287d4fb66d5a6b205a079c9350f4c56a5bbb9",
+      "current_selector_sha256": "694051ad9cda9abab9651d425350ee672721ebe5c94f525b151e5161fe19d67c",
+      "manifest": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/selection_manifest_rerun.json",
+      "log": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/selection_rerun.log",
+      "timing_record": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/selection_rerun_timing.json"
+    },
+    "rxrx1_subset_download": {
+      "portable_command_initial": "python scripts/fetch_rxrx1_subset.py --metadata <metadata.csv> --selection data/manifests/selection_manifest.json --destination <rxrx1_validation_subset> --workers 4 --progress <progress_subset_fetch.json>",
+      "portable_command_resume": "python scripts/fetch_rxrx1_subset.py --metadata <metadata.csv> --selection data/manifests/selection_manifest.json --destination <rxrx1_validation_subset> --workers 16 --progress <progress_subset_fetch_resume.json>",
+      "initial_pass": {
+        "intentionally_interrupted": true,
+        "elapsed_seconds_progress": 420.92172145843506,
+        "atomically_complete_pngs_retained": 436,
+        "partial_pngs_retained": 0
+      },
+      "resume_pass": {
+        "returncode": 0,
+        "elapsed_seconds_wall": 489.9335224860006,
+        "downloaded_pngs": 1484,
+        "reused_crc_verified_pngs": 436,
+        "verified_pngs": 1920,
+        "failures": 0,
+        "log": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/subset_fetch_resume.log",
+        "timing_record": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/subset_fetch_resume_timing.json"
+      },
+      "subset_directory": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_validation_subset",
+      "refreshed_manifest": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/workcopy/data/manifests/rxrx1_subset_integrity.json",
+      "refreshed_manifest_sha256": "63cf46acc1a27cdac01173cd31d68996858ac02f6f19243d7eb08cf4d60bde48",
+      "archived_manifest_sha256": "b2dbcb9590fa89c1e90795f6265ef22f2c34f6e4b2a93003b24281e24ebee591",
+      "records_exact": 1920,
+      "record_mismatches": 0,
+      "total_bytes": 117421323,
+      "aggregate_path_sha256_digest": "ff14ffaecae84655f46b336bcacc2903ed1c7e83c641e00019fa4378cf8015eb",
+      "whole_manifest_hash_difference_explained_by": [
+        "completed_at_utc",
+        "downloaded_files",
+        "reused_crc_verified_files",
+        "selection_manifest"
+      ],
+      "license_note": "The licensed raw PNG subset was fetched only for verification and is excluded from release artifacts."
+    },
+    "full_default_simulation": {
+      "portable_command": "python scripts/run_simulation.py --output <full_simulation> --figures <full_simulation_figures> --progress <full_simulation_progress.json>",
+      "returncode": 0,
+      "elapsed_seconds_progress": 254.75316071510315,
+      "elapsed_seconds_wall_observed": 255.773,
+      "steps": 2000,
+      "failures": 0,
+      "invariance_trials": 1000,
+      "invariance_failures": 0,
+      "defaults": {
+        "seed": 51907,
+        "replicates_per_effect": 250,
+        "effect_sizes": [0.0, 0.35, 0.7, 1.0],
+        "experiment_pairs": 8,
+        "exact_assignments_per_test": 256
+      },
+      "current_source_reproduction_audit": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/current_simulation_reproduction_audit.json",
+      "outputs": {
+        "simulation_replicates.csv": {
+          "sha256": "c8b0bc524063ef6725bcce37dcbff410c957a03edb500226288a32b9a6374049",
+          "byte_identical_to_archived": true
+        },
+        "simulation_summary.csv": {
+          "sha256": "409c66680379e04d8a34494aec901690c1f77eb73edaeb45d682999322a329f9",
+          "byte_identical_to_archived": true
+        },
+        "simulation_audit.json": {
+          "rerun_sha256": "c8bc1381317b0cc27d74c6640f800e38978d54452637a90f36357d13221afd1a",
+          "archived_sha256": "35fede8ef31a8983f9b311efd1e7b3489aca2436196fe7e9c276c85e17594ca0",
+          "normalized_structurally_identical": true,
+          "normalization_removed_fields": ["created_utc", "outputs", "software"]
+        },
+        "simulation_power.png": {
+          "sha256": "00f91301df4a4eda72b924343e3e60a99cf0905c4a655f0db5e88564352fe7de",
+          "byte_identical_to_archived": true
+        },
+        "simulation_power.pdf": {
+          "rerun_sha256": "675922074215dc6b48a1f18dd20613ae18d02f12618693e9cedeabd4042eecde",
+          "archived_sha256": "c42e3ee76426c9997d204af116f5f042702d833653ad853e64b8b79a0a02c6a6",
+          "byte_identical": false,
+          "raster_150dpi_byte_identical": true,
+          "raster_sha256": "363798ae28cbf57d8cf55c79b23db28ac6b631915406a3f6e6787dbb8af22c16"
+        }
+      },
+      "source_provenance_note": "The archived independent reproduction recorded earlier hashes for src/cqoi/simulation.py and src/cqoi/invariants.py. This current-source full rerun closes that provenance gap because its numerical CSVs and manuscript PNG remain byte-identical.",
+      "fully_captured_repeat": {
+        "purpose": "Second current-source default run solely to preserve an authoritative terminal log and wrapper timing record.",
+        "returncode": 0,
+        "elapsed_seconds_wall": 447.828205677999,
+        "elapsed_seconds_progress": 446.9150171279907,
+        "steps": 2000,
+        "failures": 0,
+        "invariance_trials": 1000,
+        "invariance_failures": 0,
+        "replicates_summary_and_png_byte_identical_to_archive_and_first_rerun": true,
+        "normalized_audit_identical": true,
+        "normalized_audit_sha256": "f6e947056d0fddb672762e7eb62628c47d2e5692335f8abb94894144340cd614",
+        "pdf_raster_150dpi_byte_identical": true,
+        "log": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/full_simulation_captured.log",
+        "log_sha256": "dc94b77d4e7a98ed578265e1b716a34c0234904d7272357e3f031ce1f8049fa3",
+        "timing_record": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/full_simulation_captured_timing.json",
+        "timing_record_sha256": "6bb14a777c8e40d60d61aaff9c2c5aa4090449d0a04b7f864dbef41491eb7078",
+        "progress_record": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/progress_full_simulation_captured.json",
+        "progress_record_sha256": "1283897b1498162a287b304e8520d73a404037d73725247198527f031819b9f7",
+        "output_directory": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/full_simulation_captured",
+        "figure_directory": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/full_simulation_captured_figures",
+        "audit_sha256": "1da3d9be9983a133ed6803b4e9d85d828936ba89c4abfd931a20eac48642935f",
+        "pdf_sha256": "ee8b7d8a223fd73f26261cb39de1c3156c8cff5fbd1dd28fe333699663c9b285"
+      }
+    },
+    "full_rxrx1_confirmation": {
+      "portable_command": "python scripts/run_rxrx1_experiment.py --selection data/manifests/selection_manifest.json --metadata <metadata.csv> --data-root <rxrx1_validation_subset> --integrity-manifest data/manifests/rxrx1_subset_integrity.json --output <rxrx1_rerun> --figures <rxrx1_rerun_figures> --progress <progress_rxrx1_rerun.json>",
+      "returncode": 0,
+      "elapsed_seconds_wall": 228.5731317919999,
+      "preflight_pngs": 1920,
+      "preflight_failures": 0,
+      "steps": 223,
+      "seeds": 20,
+      "failures": 0,
+      "log": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_rerun.log",
+      "timing_record": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/rxrx1_rerun_timing.json",
+      "outputs": {
+        "pair_seed_results.csv": {
+          "sha256": "7daf049b643a869f77ee5aaee3cdee15644ea7805c16a55052217b85f2420626",
+          "byte_identical_to_archived": true
+        },
+        "acquisition_null_results.csv": {
+          "sha256": "6a093b8768ff16263fe009b46d1333fd6fc52bb336ead5ddf1452c38e07ab632",
+          "byte_identical_to_archived": true
+        },
+        "acquisition_null_false_positive_summary.csv": {
+          "sha256": "6b4f67c5dd3ec449c13cefccc4db7f844230ddbf56cfae8f9cd210f691238427",
+          "byte_identical_to_archived": true
+        },
+        "approximate_action_stress.csv": {
+          "sha256": "bf300147876cb8635679fedb2eb833d76e63119f856fb25bd89c2b37a6a66ade",
+          "byte_identical_to_archived": true
+        },
+        "clean_contaminated_equivalence.csv": {
+          "sha256": "239d950bee3676e5d55bf2c6773720400191362134ef62ee59ccdd8cb0603a3e",
+          "byte_identical_to_archived": true
+        },
+        "hidden_nuisance_truth_NOT_ANALYSIS.csv": {
+          "sha256": "ae2cc341dc9e05fc2e8f48a38b7e1383fba63c278fa85d9153b0f2875e00fd75",
+          "byte_identical_to_archived": true
+        },
+        "experiment_summary.json": {
+          "rerun_sha256": "acd11ab789a692131d636527649d94dd28945aa73f2f67f24c059d7ba8033446",
+          "archived_sha256": "669d7343ab5fec2275a4a622ec8d36260ac634670c98a086189d4b04bdd942e0",
+          "scientific_and_source_fields_identical": true,
+          "runtime_only_differences": ["created_utc", "absolute paths", "figure PDF hash", "software.python", "software.platform"]
+        },
+        "rxrx1_mmd_by_method.png": {
+          "sha256": "d831d0b2a3395c9808ffc9c645d74d6679f1d56cebd9ed42988a850b556ebe20",
+          "byte_identical_to_archived": true
+        },
+        "rxrx1_mmd_by_method.pdf": {
+          "rerun_sha256": "abf2610336e53ff1454ea367dfe679fd1030d9e3fdf163cad284eb260d21936d",
+          "archived_sha256": "b384b8282bb1c7185dddb284843b60102c94f9758cc08fb9be01e5067c7f97e5",
+          "byte_identical": false,
+          "raster_150dpi_byte_identical": true,
+          "raster_sha256": "538e32e99e68840706dc8b67f82aae1dc63643f740b94116eeda3af8cdfcbbdf"
+        }
+      }
+    },
+    "post_analysis_extension": {
+      "portable_command": "python scripts/run_expert_review_extensions.py --selection data/manifests/selection_manifest.json --amendment data/manifests/post_rxrx1_expert_review_extension.json --metadata <metadata.csv> --data-root <rxrx1_validation_subset> --nuisance-truth <rerun hidden nuisance truth> --integrity-manifest data/manifests/rxrx1_subset_integrity.json --original-results <rerun pair results> --output <extensions_rerun> --progress <progress_extensions_rerun.json>",
+      "returncode": 0,
+      "elapsed_seconds_wall": 2.6485043779994157,
+      "steps": 252,
+      "failures": 0,
+      "log": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extensions_rerun.log",
+      "timing_record": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extensions_rerun_timing.json",
+      "outputs": {
+        "rosenbaum_sensitivity.csv": {
+          "sha256": "c9b8ca543316e27086267a18a90e0ae6944567d3dae3407c1ddd2f8f9433b21a",
+          "byte_identical_to_archived": true
+        },
+        "persistence_stability.csv": {
+          "sha256": "9d4c872e188bc39a3fedffe2d946859aa963df3a4eb4011055a443aae5bcbb32",
+          "byte_identical_to_archived": true
+        },
+        "rosenbaum_summary.json": {
+          "sha256": "db0bcd9870b773d65db91bdf3cfd3a45a3da346162d017fbecb0abf7644e72c8",
+          "byte_identical_to_archived": true
+        },
+        "persistence_summary.json": {
+          "sha256": "4338c098b174c84b22799e4157d75ae3a70ff1f3ce13ff8a0c2885d3983a7e0f",
+          "byte_identical_to_archived": true
+        },
+        "expert_review_extension_audit.json": {
+          "rerun_sha256": "63e770924eb4c3c45f0081d9b3fe5109bac4b029fee6056511f3d806b79c65b5",
+          "archived_sha256": "7928f075dd02630e2c735a89bbd64e8a76f8b9191b2785cfe8de6542462c0882",
+          "scientific_fields_identical": true,
+          "runtime_only_differences": ["absolute paths", "software.python", "refreshed image-integrity-manifest whole-file hash"]
+        }
+      }
+    },
+    "main_results_tex_from_fully_rerun_outputs": {
+      "portable_command": "python scripts/build_results_tex.py --simulation-summary <rerun summary> --simulation-replicates <rerun replicates> --simulation-audit <rerun audit> --simulation-reproduction-audit <current source audit> --rx-results <rerun pair results> --rx-summary <rerun summary> --rx-acquisition-null-summary <rerun null summary> --rx-approximate-stress <rerun stress> --rx-equivalence <rerun equivalence> --selection data/manifests/selection_manifest.json --tests-progress logs/progress_tests.json --output <results_from_fully_rerun_outputs.tex>",
+      "returncode": 0,
+      "elapsed_seconds_wall": 0.31138763899980404,
+      "output": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/results_from_fully_rerun_outputs.tex",
+      "sha256": "7dd075b2d5ce0eabc3515d950381278beb7d93426e31d3a71971c4f6a4a96be1",
+      "byte_identical_to_paper_results_tex": true,
+      "log": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/results_tex_fully_rerun.log",
+      "timing_record": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/results_tex_fully_rerun_timing.json"
+    },
+    "extension_results_tex": {
+      "portable_command": "python scripts/build_extension_results_tex.py --sensitivity <rerun sensitivity> --sensitivity-summary <rerun sensitivity summary> --persistence-summary <rerun persistence summary> --audit <rerun extension audit> --output <extension_results_from_rerun.tex>",
+      "returncode": 0,
+      "elapsed_seconds_wall": 0.2979482859991549,
+      "output": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extension_results_from_rerun.tex",
+      "rerun_audit_sha256_macro": "63e770924eb4c3c45f0081d9b3fe5109bac4b029fee6056511f3d806b79c65b5",
+      "sha256": "7aa65751fdf95cacb25cbcab7b9ae82fc5b89109dda87511b20f09b13558b8d3",
+      "archived_sha256": "92d06e0e5a0049d5827be14080211fba232dc5248c4477289a76fb3f1935e37b",
+      "only_difference": "RxExtensionAuditHash provenance macro",
+      "all_numerical_macros_identical": true,
+      "fresh_scientific_outputs_with_frozen_audit_byte_identical": true,
+      "fresh_scientific_outputs_with_frozen_audit_sha256": "92d06e0e5a0049d5827be14080211fba232dc5248c4477289a76fb3f1935e37b",
+      "log": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extension_tex_rerun.log",
+      "timing_record": "/workspace/scratch/c78d01b81b62/audit_workspace/agent_code_rerun/extension_tex_rerun_timing.json"
+    }
+  },
+  "key_scientific_results": {
+    "simulation_null_rejection_fraction": {
+      "quotient_exact": 0.052,
+      "raw_coordinates": 1.0,
+      "moment_registration": 0.056,
+      "euler_secondary": 0.04
+    },
+    "simulation_effect_1_rejection_fraction": {
+      "quotient_exact": 0.992,
+      "raw_coordinates": 1.0,
+      "moment_registration": 1.0,
+      "euler_secondary": 1.0
+    },
+    "rxrx1_primary_seed_20260731": {
+      "quotient_exact": {"statistic": 0.003643781768319254, "p_value": 0.0078125},
+      "raw_coordinates": {"statistic": 0.166439, "p_value": 0.0078125},
+      "moment_registration": {"statistic": -0.006536, "p_value": 0.2109375},
+      "euler_secondary": {"statistic": 0.75354, "p_value": 0.0078125},
+      "exact_assignments": 256,
+      "tail_assignments_for_quotient": 2
+    },
+    "rxrx1_secondary_quotient_family": {
+      "pairs": 9,
+      "minimum_raw_p_value": 0.0078125,
+      "minimum_holm_adjusted_p_value": 0.0703125,
+      "holm_significant_pairs_at_0_05": 0
+    },
+    "exact_equivalence_gate": {
+      "rows": 20,
+      "all_passed": true,
+      "maximum_quotient_feature_error": 0.0,
+      "maximum_euler_feature_error": 0.0,
+      "maximum_quotient_statistic_difference": 0.0,
+      "maximum_quotient_p_value_difference": 0.0
+    },
+    "acquisition_only_false_positives_out_of_200": {
+      "quotient_exact": 0,
+      "euler_secondary": 0,
+      "moment_registration": 0,
+      "raw_coordinates": 200
+    },
+    "rosenbaum_extension": {
+      "critical_gamma": 2.1999953016638756,
+      "upper_p_at_critical_gamma": 0.050000000308092846
+    },
+    "persistence_extension": {
+      "sites": 32,
+      "exact_checks_passed": 32,
+      "stability_checks_passed": 32,
+      "maximum_exact_action_bottleneck": 0.0,
+      "maximum_perturbation_bottleneck": 0.003917800991692692,
+      "maximum_realized_sup_norm": 0.003920347830804881
+    },
+    "results_changed_from_archived_paper": false
+  },
+  "scientific_code_review": {
+    "exact_randomization": "The paired MMD test exhaustively enumerates all 2^8 within-block label swaps. With full enumeration, p = exceedances/256 is exact; no Monte Carlo plus-one correction is required.",
+    "bandwidth": "The RBF bandwidth is label-blind and computed from pooled observations.",
+    "sharp_null": "At simulation effect size zero, unit-level potential outcomes are bytewise equal before treatment- and morphology-dependent acquisition contamination.",
+    "quotient_action": "The exact endpoint crops finite support and canonicalizes each of two sites under C4 rotations and integer translations before well-level concatenation.",
+    "experimental_unit": "The well is the scientific unit; both sites are repeated measurements aggregated before inference.",
+    "multiplicity": "The primary contrast is prespecified as the sole primary test; the nine replication contrasts form their own Holm-adjusted family. Treating all ten as one family would give 0.078125 for the primary quotient p-value, but that is not the frozen inferential plan.",
+    "negative_control": "Only raw coordinates fail the exact acquisition-only control. Moment registration has 0/200 false positives in this exact control and must not be described as failing it.",
+    "interval_labels": "Bootstrap quantiles and acquisition-null binomial intervals are reported as descriptive rather than causal confidence intervals, consistent with the paper.",
+    "approximate_actions": "Off-grid rotations, cropping, and noise are correctly labeled approximate-action stress tests rather than exact invariance checks.",
+    "conclusion": "No core statistical, numerical, or implementation defect was found, and no result or experiment value requires modification."
+  },
+  "non_numerical_findings": [
+    {
+      "severity": "low",
+      "component": "README.md",
+      "finding": "The repository-root command `sha256sum -c data/manifests/selection_manifest.json.sha256` exits 1 because the sidecar names `selection_manifest.json` relative to its own directory.",
+      "recommended_change": "Use `(cd data/manifests && sha256sum -c selection_manifest.json.sha256)` or regenerate the sidecar with a repository-root-relative filename.",
+      "numerical_impact": "none"
+    },
+    {
+      "severity": "low",
+      "component": "support-file downloader hygiene",
+      "finding": "A stale 30,408,704-byte `rxrx1-dl-embeddings.zip.part` remained after a valid final archive and extracted file had passed all hashes. Verify-only correctly ignored it.",
+      "recommended_change": "Optionally remove a stale `.part` after an existing final archive/extracted file passes the sealed hashes.",
+      "numerical_impact": "none"
+    },
+    {
+      "severity": "informational",
+      "component": "archived simulation reproduction provenance",
+      "finding": "The archived reproduction audit names earlier simulation/invariant source hashes, while the release contains later source hashes.",
+      "recommended_change": "Include the new current-source reproduction audit with the release evidence.",
+      "numerical_impact": "none; current-source rerun is byte-identical for CSVs and PNG"
+    }
+  ],
+  "final_conclusion": {
+    "all_unit_tests_passed": true,
+    "all_simulation_numerical_outputs_reproduced": true,
+    "all_rxrx1_scientific_outputs_reproduced": true,
+    "all_extension_scientific_outputs_reproduced": true,
+    "main_results_tex_reproduced_byte_exactly": true,
+    "paper_result_changes_required": false,
+    "core_code_changes_required": false,
+    "recommended_documentation_changes": 1,
+    "optional_hygiene_changes": 1
+  }
+}

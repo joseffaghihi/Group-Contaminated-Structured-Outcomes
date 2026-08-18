@@ -1,0 +1,15 @@
+{
+  "analysis_status": "post_outcome_exploratory_extension",
+  "diagnostic_resolution": 16,
+  "exact_canonical_array_checks_passed": 32,
+  "exact_persistence_invariance_checks_passed": 32,
+  "gaussian_bandwidth": 1.0,
+  "kernel_link_checks_passed": 32,
+  "maximum_exact_action_bottleneck": 0.0,
+  "maximum_perturbation_bottleneck": 0.003917800991692692,
+  "maximum_realized_sup_norm": 0.003920347830804881,
+  "perturbation_epsilon": 0.00392156862745098,
+  "primary_pair": "pair_01",
+  "sites": 32,
+  "stability_checks_passed": 32
+}
