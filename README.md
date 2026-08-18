@@ -5,15 +5,14 @@ Group-Contaminated Structured Outcomes: Quotient Identification and Exact
 Randomization Inference”** by Usef Faghihi and Amir Saki.
 
 - [Article PDF](paper/group_contaminated_structured_outcomes.pdf)
-- [Formula companion](paper/formula_companion.pdf)
 - [Reproducibility audit](docs/REPRODUCIBILITY_AUDIT.md)
 - [Citation metadata](CITATION.cff)
 
 This repository is arranged as a runnable research artifact. It contains the
 analysis code, exact dependency versions, frozen design and integrity
-manifests, machine-readable reported results, generated figures, tests, and
-final PDFs. Raw RxRx1 data are fetched from the official source and are not
-redistributed here.
+manifests, machine-readable reported results, generated figures, tests, and the
+final article PDF. Raw RxRx1 data are fetched from the official source and are
+not redistributed here.
 
 LaTeX/arXiv source files, duplicate release archives, runtime logs, and
 intermediate build files are intentionally excluded. This repository
@@ -182,7 +181,7 @@ scripts/            download, validation, simulation, and experiment runners
 tests/              dependency-free test functions and audit checks
 data/manifests/     frozen design, amendments, and integrity records
 results/            reported numerical outputs, figures, and audits
-paper/              final article and formula-companion PDFs only
+paper/              final article PDF only
 docs/               scientific and reproducibility documentation
 requirements.txt    exact Python dependency versions
 CITATION.cff        GitHub citation metadata
