@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Virtual environments and local configuration
+.venv/
+venv/
+.env
+.env.*
+
+# External RxRx1 data and generated run state
+data/raw/
+data/rxrx1_validation_subset/
+logs/
+work/
+*.part
+*.tmp
+
+# Manuscript/build archives are distributed separately
+*.tex
+*.zip
+arxiv/
+arxiv_source/
+
+# Local tool and operating-system files
+.mplconfig/
+.DS_Store
+Thumbs.db
+desktop.ini
